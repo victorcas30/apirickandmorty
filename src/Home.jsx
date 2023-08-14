@@ -10,7 +10,7 @@ const Home = () => {
             <div className="row">
             <div className="col-md-4">
                 <div className="card project-card">
-                <img src="https://victorcas30.github.io/src/assets/img/rick1.jpg" className="card-img-top" alt="Proyecto 1"/>
+                <img src="https://victorcas30.github.io/rick1.jpg" className="card-img-top" alt="Proyecto 1"/>
                 <div className="card-body">
                     <h5 className="card-title">Proyecto 1</h5>
                     <p className="card-text">Tarjetas - Rick And Morty.</p>
@@ -20,7 +20,7 @@ const Home = () => {
             </div>
             <div className="col-md-4">
                 <div className="card project-card">
-                <img src="./src/assets/img/rick2.jpg" className="card-img-top" alt="Proyecto 2"/>
+                <img src="./rick1.jpg" className="card-img-top" alt="Proyecto 2"/>
                 <div className="card-body">
                     <h5 className="card-title">Proyecto 2</h5>
                     <p className="card-text">Carrusel - Rick And Morty.</p>
