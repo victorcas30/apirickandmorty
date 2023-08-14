@@ -15,7 +15,7 @@ const Rutas = () => {
         <>
         <Menu/>
         <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/apirickandmorty" element={<Home/>} />
             <Route path="/apirick" element={<ApiRick/>} />
             <Route path="/apirickcarrusel" element={<ApiRickCarrusel/>} />
             <Route path="/subrutasrick/*" element={<SubRutasRick/>}>
