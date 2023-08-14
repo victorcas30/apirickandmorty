@@ -24,7 +24,7 @@ const Home = () => {
                 <div className="card-body">
                     <h5 className="card-title">Proyecto 2</h5>
                     <p className="card-text">Carrusel - Rick And Morty.</p>
-                    <Link to="/apirick" className="btn btn-dark">Ver más</Link>
+                    <Link to="/apirickcarrusel" className="btn btn-dark">Ver más</Link>
                 </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@ const Home = () => {
                 <div className="card-body">
                     <h5 className="card-title">Proyecto 3</h5>
                     <p className="card-text">Sub Rutas - Rick And Morty.</p>
-                    <Link to="/apimarvel" className="btn btn-dark">Ver más</Link>
+                    <Link to="/subrutasrick" className="btn btn-dark">Ver más</Link>
                 </div>
                 </div>
             </div>
