@@ -19,6 +19,7 @@ const ApiRick = () => {
 
     return(
         <>
+        <div className="container">
         <h1 className="display-4">Api Rick and Morty</h1>
         <hr/>
         {isLoading && <Loading/>}
@@ -29,6 +30,7 @@ const ApiRick = () => {
                 return <CardsRick key={id} personajeRickAndMorty={personaje} />
             })
         }
+        </div>
         </div>
         </>
     )
