@@ -18,7 +18,9 @@ const ApiRickCarrusel = () => {
 
     return(
         <>
+        <div className="container">
         <Carrusel key={num} rick={personaje} incrementar={incrementar} decrementar={decrementar} num={num} />
+        </div>
         </>
     )
 

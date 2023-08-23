@@ -65,6 +65,20 @@ footer a:hover{
     justify-items: center;
 }
 
+/* Media queries para pantallas medianas */
+@media (max-width: 768px) {
+    .contenedorTarjeta {
+      grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas en pantallas medianas */
+    }
+  }
+  
+  /* Media queries para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .contenedorTarjeta {
+      grid-template-columns: repeat(1, 1fr); /* Cambia a una columna en pantallas pequeñas */
+    }
+  }
+  
 .contenedorTarjetaMarvel{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -164,19 +178,6 @@ footer a:hover{
     
 }
 
-.cajaCarrusel {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    width: 100%;
-    max-width: 500px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
 .containerrutas{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -213,3 +214,6 @@ footer a:hover{
     color: darkslategray;
     font-weight: bold;
 }
+
+
+  
