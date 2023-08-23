@@ -1,16 +1,27 @@
-import { NavLink, Outlet, useMatch } from "react-router-dom";
+import { NavLink, Outlet, useMatch , useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllPersonajesRickAndMorty } from "./leerApis";
 import "./style.css";
+import { useMediaQuery } from "react-responsive";
+
 
 const SubRutasRick = () => {
   const [personajes, setPersonajes] = useState([]);
+  const navigate = useNavigate(); // Hook para navegar
+
 
   useEffect(() => {
     getAllPersonajesRickAndMorty().then(getPersonajesRM => {
       setPersonajes(getPersonajesRM);
     });
   }, []);
+
+  const isMobile = useMediaQuery({ maxWidth: 767 }); // Detectar dispositivo móvil
+
+  const handleNameClick = (id) => {
+    // Navegar directamente a la tarjeta correspondiente
+    navigate(`/subrutasrick/cardricksubruta/${id}`);
+  };
 
   return (
     <>
@@ -28,14 +39,25 @@ const SubRutasRick = () => {
                     return (
                       <tr key={id}>
                         <td>
-                          <NavLink
-                            className={({ isActive }) =>
-                              isActive ? "navLink activeNavLink" : "navLink"
-                            }
-                            to={`cardricksubruta/${id}`}
-                          >
-                            {name}
-                          </NavLink>
+                          {isMobile ? (
+                            <button
+                              className="navLink"
+                              onClick={() => handleNameClick(id)}
+                            >
+                              {name}
+                            </button>
+                          ) : (
+                            <NavLink
+                              className={({ isActive }) =>
+                                isActive
+                                  ? "navLink activeNavLink"
+                                  : "navLink"
+                              }
+                              to={`cardricksubruta/${id}`}
+                            >
+                              {name}
+                            </NavLink>
+                          )}
                         </td>
                       </tr>
                     );
@@ -45,14 +67,13 @@ const SubRutasRick = () => {
             </div>
           </div>
           <div className="columna2">
-            {/* En lugar de mostrar Outlet aquí, mostrarlo después de la lista de personajes */}
+          <Outlet />
           </div>
         </div>
       </div>
-      <Outlet />
+
     </>
   );
 };
 
 export default SubRutasRick;
-    
