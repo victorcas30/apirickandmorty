@@ -21,6 +21,9 @@ const Menu = () =>{
                     <NavLink className={({isActive}) => isActive ? "nav-link isActive" : "nav-link"} to="/apirickcarrusel">Carrusel Rick and Morty</NavLink>
                     </li>
                     <li className="nav-item">
+                    <NavLink className={({isActive}) => isActive ? "nav-link isActive" : "nav-link"} to="/apirickpage">Rick Page</NavLink>
+                    </li>
+                    <li className="nav-item">
                     <NavLink className={({isActive}) => isActive ? "nav-link isActive" : "nav-link"} to="/subrutasrick">Sub Rutas Rick and Morty</NavLink>
                     </li>
                     <li className="nav-item">

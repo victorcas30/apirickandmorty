@@ -17,13 +17,13 @@ const Carrusel = (props) => {
                         <div className="position-relative">
                             <img src={image} className="d-block w-100" alt="..." />
                             <button class="carousel-control-prev" type="button" onClick={decrementar} data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" onClick={incrementar} data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next" type="button" onClick={incrementar} data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Next</span>
+                            </button>
                         </div>
                         <Carousel.Caption className="cajaCarrusel">
                             <h4>{`${id} - ${name}`}</h4>

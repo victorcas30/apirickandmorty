@@ -9,6 +9,7 @@ import Acerca from "./Acerca";
 import Loading from "./Loading";
 import Error404 from "./Error404";
 import CardRickSubRuta from "./CardRickSubRuta";
+import ApiRickPage from "./ApiRickPage";
 
 const Rutas = () => {
     return(
@@ -18,6 +19,7 @@ const Rutas = () => {
             <Route path="/apirickandmorty" element={<Home/>} />
             <Route path="/apirick" element={<ApiRick/>} />
             <Route path="/apirickcarrusel" element={<ApiRickCarrusel/>} />
+            <Route path="/apirickpage" element={<ApiRickPage/>} />
             <Route path="/subrutasrick/*" element={<SubRutasRick/>}>
                 <Route path="cardricksubruta/:id" element={<CardRickSubRuta/>} />
             </Route>

@@ -8,6 +8,16 @@ const getAllPersonajesRickAndMorty = async() => {
     }
 }
 
+const getAllPersonajesRickAndMortyPage = async (page) => {
+    try {
+        const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        throw new Error("Ha ocurrido un error");
+    }
+};
+
 const getAllPersonajesMarvel = async(nombrePersonaje) => {
     try {
         const getAllPersonajes = await fetch(`https://gateway.marvel.com/v1/public/characters?apikey=f19709d93d497312d9214a95fdd52a5d&hash=64652737b0a9cad28464c984a45714e3&ts=1000&nameStartsWith=${nombrePersonaje}`)
@@ -51,4 +61,4 @@ const getPersonajeMarvel = async(id) => {
     }
 }
 
-export {getAllPersonajesRickAndMorty,getAllPersonajesMarvel,getPersonajeRickAndMorty,getPersonajeMarvel,getAllMarvel}
+export {getAllPersonajesRickAndMorty,getAllPersonajesMarvel,getPersonajeRickAndMorty,getPersonajeMarvel,getAllMarvel, getAllPersonajesRickAndMortyPage}
